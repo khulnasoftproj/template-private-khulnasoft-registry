@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Issue of khulnasoft
+    url: https://github.com/khulnasoftproj/khulnasoft/issues
+    about: Please report issues about khulnasoft itself

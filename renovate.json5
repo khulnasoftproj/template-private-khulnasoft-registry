@@ -1,0 +1,26 @@
+{
+  extends: [
+    "config:base",
+    "github>khulnasoftproj/khulnasoft-renovate-config#1.8.0",
+    "github>khulnasoftproj/khulnasoft-renovate-config:file#1.8.0(CONTRIBUTING\\.md)",
+    "github>khulnasoftproj/khulnasoft-renovate-config:file#1.8.0(khulnasoft-all\\.yaml)",
+    "github>khulnasoftproj/khulnasoft-renovate-config:file#1.8.0(khulnasoft/.*\\.yaml)",
+    "github>khulnasoftproj/khulnasoft-renovate-config:file#1.8.0(pkgs/.*/pkg\\.yaml)",
+    "github>sulaiman-coder/renovate-config:action-semver#0.1.3",
+    "github>sulaiman-coder/renovate-config:renovate-config-preset#0.1.3(sulaiman-coder/renovate-config:action-semver)",
+  ],
+  automerge: true,
+  platformAutomerge: true,
+  prHourlyLimit: 0,
+  prConcurrentLimit: 0,
+  branchConcurrentLimit: 0,
+  regexManagers: [
+    {
+      fileMatch: ["README.md"],
+      matchStrings: [
+        "ref: (?<currentValue>.*?) # renovate: depName=(?<depName>.*)",
+      ],
+      datasourceTemplate: "github-releases",
+    },
+  ],
+}

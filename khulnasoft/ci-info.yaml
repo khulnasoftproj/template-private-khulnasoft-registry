@@ -1,0 +1,8 @@
+---
+# khulnasoft - Declarative CLI Version Manager
+# https://khulnasoftproj.github.io/
+registries:
+  - type: standard
+    ref: v4.40.0 # renovate: depName=khulnasoftproj/khulnasoft-registry
+packages:
+  - name: sulaiman-coder/ci-info@v2.1.2

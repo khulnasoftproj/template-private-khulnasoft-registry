@@ -1,0 +1,19 @@
+---
+name: JSON Schema
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/json-schema.yaml
+      - registry.yaml
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/workflows/json-schema.yaml
+      - registry.yaml
+jobs:
+  json-schema:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: khulnasoftproj/registry-action/validate-json-schema@v0.2.0

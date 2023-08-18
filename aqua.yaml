@@ -1,0 +1,16 @@
+---
+# khulnasoft - Declarative CLI Version Manager
+# https://khulnasoftproj.github.io/
+registries:
+  - type: standard
+    ref: v4.40.0 # renovate: depName=khulnasoftproj/khulnasoft-registry
+    name: std
+  - name: standard
+    type: local
+    path: registry.yaml
+packages:
+  - import: khulnasoft-local.yaml
+  - name: khulnasoftproj/registry-tool@v0.1.10
+    registry: std
+  - name: rhysd/actionlint@v1.6.25
+    registry: std
